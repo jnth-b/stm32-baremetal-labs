@@ -1,0 +1,28 @@
+.DS_Store
+Thumbs.db
+
+# STM32CubeIDE / Eclipse metadata
+.settings/
+.metadata/
+*.launch
+
+# Build outputs
+Debug/
+Release/
+build/
+dist/
+out/
+*.o
+*.d
+*.su
+*.cyclo
+*.map
+*.list
+*.elf
+*.bin
+*.hex
+
+# Temporary files
+*.tmp
+*.log
+*.swp
