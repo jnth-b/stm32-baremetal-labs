@@ -47,6 +47,7 @@ char uart2_read(void)
 
 void uart2_write(char ch)
 {
+    /* Keep this blocking for now; simple and predictable during board bring-up. */
     while (!(USART2->SR & SR_TXE));
     USART2->DR = (uint8_t)ch;
 }
