@@ -1,0 +1,5 @@
+*.s linguist-detectable=false
+*.S linguist-detectable=false
+*.ld linguist-detectable=false
+*.c linguist-language=C
+*.h linguist-language=C
