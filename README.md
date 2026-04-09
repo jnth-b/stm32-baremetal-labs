@@ -28,6 +28,8 @@ The goal was to understand ADC setup at register level and push readings to seri
 - `Src/adc.c` - ADC init, trigger, read helpers
 - `Src/uart.c` - UART2 init/read/write
 - `Inc/adc.h`, `Inc/uart.h` - interfaces
+- `projects/11_systick_delay` - separate SysTick delay demo project
+- `common-files/` - shared references (datasheet, manuals, chip headers)
 
 ## How to run
 
