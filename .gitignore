@@ -26,3 +26,7 @@ out/
 *.tmp
 *.log
 *.swp
+
+# Private local notes (keep out of git)
+.local-instructions.md
+.local/
