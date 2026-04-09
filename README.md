@@ -1,7 +1,7 @@
-# STM32 ADC Continuous Conversion (Bare Metal)
+# STM32 Bare-Metal Labs (F446RE)
 
-A small STM32F446RE bare-metal project that reads ADC values on `PA1` and streams them over UART2.  
-Built as part of my driver-learning series while keeping things modular and easy to extend.
+A curated STM32F446RE bare-metal workspace with multiple learning projects, shared references, and reusable headers.  
+Organized for frequent uploads so each experiment stays clean and easy to find.
 
 ## Why I built this
 
@@ -10,11 +10,11 @@ The goal was to understand ADC setup at register level and push readings to seri
 
 ## Features
 
-- Bare-metal ADC1 setup on `PA1` (no HAL)
-- Continuous conversion flow for repeated sampling
-- UART2 TX/RX driver on `PA2`/`PA3`
-- Modular source layout (`Src/` + `Inc/`)
-- `printf` output redirected through UART for quick serial monitoring
+- Multiple project folders under `projects/`
+- ADC continuous conversion + UART serial output demo
+- SysTick delay + LED/UART timing demo
+- Shared docs and chip headers in one place
+- Clean workspace-style repository structure
 
 ## Tech stack
 
@@ -24,20 +24,17 @@ The goal was to understand ADC setup at register level and push readings to seri
 
 ## Project structure
 
-- `Src/main.c` - application loop and serial print
-- `Src/adc.c` - ADC init, trigger, read helpers
-- `Src/uart.c` - UART2 init/read/write
-- `Inc/adc.h`, `Inc/uart.h` - interfaces
-- `projects/11_systick_delay` - separate SysTick delay demo project
-- `common-files/` - shared references (datasheet, manuals, chip headers)
+- `projects/10_adc_continuous_conversion/` - ADC continuous conversion project
+- `projects/11_systick_delay/` - SysTick delay demo project
+- `docs/reference/` - datasheet, reference manuals, Cortex-M4 guide, chip headers
 
 ## How to run
 
 1. Open STM32CubeIDE.
-2. Import this folder as an existing STM32 project.
-3. Build in `Debug` or `Release`.
+2. Import one project from `projects/` (for example `projects/11_systick_delay`).
+3. Build the selected project in `Debug` or `Release`.
 4. Flash to STM32F446RE board.
-5. Open serial monitor at `115200` baud and watch ADC readings.
+5. Use serial monitor at `115200` for UART-based demos.
 
 ## Screenshots
 
